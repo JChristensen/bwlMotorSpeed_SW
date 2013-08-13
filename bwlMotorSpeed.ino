@@ -20,6 +20,10 @@ const int GRN_LED = 9;                  //PB1
 const int MODE_BUTTON = 10;
 
 //fast port manipulation macros for LEDs
+//see atmel datasheet for register (port) names: http://goo.gl/coZTO4
+//see avr-libc user's manual for _BV() macro:
+//http://www.nongnu.org/avr-libc/
+//http://www.nongnu.org/avr-libc/user-manual/FAQ.html#faq_use_bv
 #define RED_LED_ON PORTB |= _BV(PORTB0)
 #define RED_LED_OFF PORTB &= ~_BV(PORTB0)
 #define RED_LED_TOGGLE PINB |= _BV(PORTB0)
